@@ -1,29 +1,32 @@
 {
   "name": "server-side-rendering",
-  "version": "1.0.0",
-  "description": "Ontwerp en ontwikkel een server-side website voor een opdrachtgever.",
-  "main": "app.js",
+  "version": "0.0.1",
+  "description": "Overzichtpagina Vini Mini",
+  "main": "index.js",
   "type": "module",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenitba/server-side-renderingy+git.git"
   },
   "keywords": [
     "node",
     "express",
     "ejs"
   ],
-  "author": "J.P. Sturkenboom <j.p.sturkenboom@hva.nl>",
-  "license": "GPL-3.0",
+  "author": "Z.Araya <zenit.araya@hva.nl>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fdnd-task/server-side-rendering/issues"
+    "url": "https://github.com/zenitba/server-side-rendering/issues"
   },
-  "homepage": "https://github.com/fdnd-task/server-side-rendering#readme",
+  "homepage": "https://github.com/zenitba/server-side-rendering",
   "dependencies": {
-    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2"
   }

@@ -1,0 +1,15 @@
+<%- include('./partials/head.ejs') %>
+
+<div class="grid-container">
+
+    <% categories.forEach(category => { %>
+        <a class="article-a" href="/<%= category.titel %>">
+            <article> 
+                <h2><%= category.titel %></h2>
+                <img class="article-img" src="/<%=category.titel%>.png">
+            </article>
+        </a>
+    <% }); %>
+</div>
+
+<%- include('./partials/footer.ejs') %>
