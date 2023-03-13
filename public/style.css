@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap');
 body {
     font-family: 'Montserrat';
-    background-color: var(--white);
+    background-color: var(--white);   
 }
 
 :root{
@@ -65,7 +65,7 @@ button {
  .nav-links ul li a{
     color:var(--black);
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
     
 .nav-links ul li a:hover{
@@ -84,23 +84,32 @@ color: var(--blue);
 .navbar a {
     float: left;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     color: var(--black);
     text-decoration: none;
-    font-size: 27px;
+    font-size: 24px;
 }
 .navbar a:hover {
     color: var(--blue);
  }
 /* catergory */
+h1{
+    position: absolute;
+    left: 64rem;
+    top: 190px;
+    margin-bottom:10rem ;
+    font-size: 5rem;
+    color: var(--blue);
+
+}
 .grid-container{
-    width: 100%;
+    width: 100vw;
     display:grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-    margin-top:1rem;
+    margin-top:4rem;
 }
 .article-a{
     text-decoration: none;
@@ -115,7 +124,13 @@ article{
 }
 article h2{
     position: relative;
-    top:2rem;
+    top:1rem;
+    font-size: 2rem;
+}
+.article-img{
+    width: 50%;
+    height: 70%;
+
 }
 
 /* responsive */
