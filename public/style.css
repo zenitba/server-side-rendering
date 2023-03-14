@@ -30,15 +30,7 @@ p {
 }
 
 /* NAV + LOGO */   
-button {
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
+
 .logo{
     width: 10rem;
 }
@@ -47,6 +39,7 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100vw;
  }
  .nav-links{
     flex: 1;
@@ -65,7 +58,7 @@ button {
  .nav-links ul li a{
     color:var(--black);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
     
 .nav-links ul li a:hover{
@@ -84,10 +77,10 @@ color: var(--blue);
 .navbar a {
     float: left;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     color: var(--black);
     text-decoration: none;
-    font-size: 24px;
+    font-size: 25px;
 }
 .navbar a:hover {
     color: var(--blue);
@@ -110,6 +103,18 @@ h1{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
     margin-top:4rem;
+    color: var(--white);
+
+}
+.product-price{
+    font-size: 1.7rem;
+    color: var(--blue);
+}
+.product-price a{
+    font-size: 2.7rem;
+    color: var(--blue);
+    font-weight: lighter;
+
 }
 .article-a{
     text-decoration: none;
@@ -130,32 +135,93 @@ article h2{
 .article-img{
     width: 50%;
     height: 70%;
+}
+/* nieuwsbrief */
+
+.input-container {
+    display: flex;
+    width: 50rem;
+    margin-bottom: 15px;
+    margin-left: 35vw;
+}
+.input-container a{
+    font-size: 3rem;
+}
+
+.icon {
+  padding: 30px;
+  background: var(--blue);
+  color: var(--white);
+  min-width: 50px;
+  text-align: center;
+  font-size: 5rem;
 
 }
 
-/* responsive */
+.input-field {
+width: 50vw;
+padding: 30px;
+outline: none;
+font-size: 1.5rem;
+}
 
-@media (max-width: 700px){
-    .header {
-        min-height: 3em;
-        width: 100vw;
-    }
-    p{
-        margin: 1em auto;
-        font-size: 0.7rem;
-        width: 80%;
-    }
- 
-    nav{
-      display: none;
-    }
-    .nav-links ul li{
-        display: none;
-    }
- }
-     
-@media(max-width:1250px){
-    .logo{
-        width: 5rem;
-    }
- }
+.input-field:focus {
+  border: 3px solid var(--blue);
+}
+h2{
+color: var(--blue);
+font-size: 4.5rem;
+text-align: center;
+
+}
+h3{
+font-weight: 400;
+font-size: 1.9rem;
+text-align: center;
+
+}
+.btn {
+background-color: var(--blue);
+color: var(--white);
+padding: 25px 20px;
+border: none;
+cursor: pointer;
+width: 31.5vw;
+opacity: 0.9;
+font-size: 2rem;
+margin-left: 35vw;
+
+}
+
+.btn:hover {
+  opacity: 1;
+}
+@media screen {
+    
+}
+ /* footer */
+ #footer-flexbox{
+    display: flex;
+   justify-content: space-evenly;
+   font-size: 30px;
+   font-weight: bolder;
+} 
+h4{
+   color: var(--blue);
+   font-weight: 900;
+}
+footer a{
+   text-decoration: none;
+   color: var(--black);
+   font-size: 28px;
+   line-height: 26px;
+   font-weight: lighter;
+}
+.footer-ul{
+   list-style: none;
+   min-width: 195px;
+   margin-bottom: 25px;
+}
+footer p{
+   padding: 30px;
+}

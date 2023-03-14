@@ -1,4 +1,3 @@
-
 import express from 'express'
 
 // basis url voor de api
@@ -13,8 +12,6 @@ app.set('views', './views')
 app.use(express.static('public'))
 
 // Maak een route voor de index
-// dit plak je aan de basis url van de api, /categories
-// { categories: data.categories } toen het niet werkte, werkt nu wel met enkel data
 app.get('/', (request, response) => {
   let categoriesUrl = url + '/categories'
 
@@ -22,24 +19,60 @@ app.get('/', (request, response) => {
     response.render('index', data)
   })
 })
-
-// dit plak je aan de basis url van de api, /producten
+// Overzichtspagina
+app.get('/producten', (request, response) => {
+    let productenUrl = url + '/producten'
+    
+    fetchJson(productenUrl).then((data) => {
+      response.render('producten', data)
+    })
+  })
+// basis url van de api, /producten
 app.get('/Ei', async (request, response) => {
-  let productenUrl = url + '/producten'
-
-  await fetchJson(productenUrl).then((data) => {
-    response.render('Ei', data )
+    let productenUrl = url + '/producten'
+  
+    await fetchJson(productenUrl).then((data) => {
+      response.render('Ei', data )
+    })
   })
-})
-
-// route naar pinda.ejs
-app.get('/Pinda', async (request, response) => {
-  let productenUrl = url + '/producten'
-
-  await fetchJson(productenUrl).then((data) => {
-    response.render('Pinda', data )
+  
+  // route naar pinda.ejs
+  app.get('/Pinda', async (request, response) => {
+    let productenUrl = url + '/producten'
+  
+    await fetchJson(productenUrl).then((data) => {
+      response.render('Pinda', data )
+    })
   })
-})
+
+// allergenen zonder inhoud 
+app.get('/Amandel', (request, response) => {
+    response.render('Amandel')
+  })
+  
+  app.get('/Schelp', (request, response) => {
+    response.render('Schelp')
+  })
+  
+  app.get('/Soja', (request, response) => {
+    response.render('Soja')
+  })
+  
+  app.get('/Vis', (request, response) => {
+    response.render('Vis')
+  })
+  
+  app.get('/Hazelnoot', (request, response) => {
+    response.render('Hazelnoot')
+  })
+  
+  app.get('/Walnoot', (request, response) => {
+    response.render('Walnoot')
+  })
+  
+  app.get('/Cashewnoot', (request, response) => {
+    response.render('Cashewnoot')
+  })
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
 app.listen(app.get('port'), function () {
