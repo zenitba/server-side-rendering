@@ -1,6 +1,6 @@
 import express from 'express'
 
-// basis url voor de api
+// basis  url voor de api
 const url = 'https://api.vinimini.fdnd.nl/api/v1'
 
 // Maak een nieuwe express app
